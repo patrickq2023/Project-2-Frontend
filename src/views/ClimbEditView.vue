@@ -5,7 +5,7 @@ import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
-const climbId = route.params.climbId
+const climbId = route.params.id
 
 const climb = ref ({
     image: '',
@@ -45,6 +45,7 @@ function updateClimb() {
     })
     .catch(err => console.error(err))
 }
+
 onMounted(LoadClimbData)
 
 
@@ -65,6 +66,6 @@ onMounted(LoadClimbData)
       <input type="text" name="elavation" placeholder="Elevation" v-model="climb.elevation" required>
       <label for="category">Category: *</label>
       <input type="text" name="Category" placeholder="Category" v-model="climb.category" required>
-    <button @click="updateBook">Edit Climb</button>
+    <button @click="updateClimb">Edit Climb</button>
 </div>
 </template>
