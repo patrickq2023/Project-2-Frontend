@@ -61,7 +61,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: #2c3e50;    
+  background: #2c3338;    
 /*  this is the place to change bkg col */
   transition:
     color 0.5s,

@@ -13,7 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <br>
         <RouterLink to="/climb">Climbs List</RouterLink>
         <br>
-        <!-- <RouterLink to="/user-comments">Users Comments</RouterLink>       -->
+        <RouterLink to="/login">Login</RouterLink>
       </nav>
     </div>
   </header>

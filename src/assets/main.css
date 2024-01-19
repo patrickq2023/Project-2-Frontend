@@ -10,7 +10,7 @@
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(5, 248, 167);
   transition: 0.4s;
   padding: 3px;
 }
@@ -20,12 +20,19 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
-
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+}
+.intro {
+  max-width: 600px;
+}
 .climblist {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center;  
 }
 .climblist1 {
   width: 150px;

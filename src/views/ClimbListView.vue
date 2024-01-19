@@ -1,13 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import { useCookies } from 'vue3-cookies'
+import { decodeCredential } from 'vue3-google-login'
 import NewClimb from '@/components/NewClimb.vue'
 
-// const { cookies } = useCookies()
+const { cookies } = useCookies()
 
 const climbsBe = ref([])
-//const isLoggedIn = ref(false)
-//const userName = ref('')
+const isLoggedIn = ref(false)
+const userName = ref('')
 
 
 const fetchData = () => {
@@ -28,10 +30,19 @@ function deleteClimb(climbId) {
     })
     .catch(err => console.error(err) )
 }
+const checkSession = () => {
+    if( cookies.isKey('user_session')) {
+        isLoggedIn.value = true
+        const userData = decodeCredential(cookies.get('user_session'))    
+        userName.value = userData.given_name
+    }
+}
+
+
 
 onMounted(() => {
     fetchData()
-    //checkSession()
+    checkSession()
 })
 </script>
 
@@ -40,11 +51,10 @@ onMounted(() => {
     <ul>
         <li class="climblist" v-for="climb in climbsBe" :key="climb._id">
             <RouterLink class="climblist1" :to="'/climb/' + climb._id">{{ climb.name }}</RouterLink> &nbsp;
-            <button @click="deleteClimb(climb._id)">Delete Climb</button> &nbsp;
-            <RouterLink :to="'/climb/update/' + climb._id">Edit Climb</RouterLink>
+            <button v-if="isLoggedIn" @click="deleteClimb(climb._id)">Delete Climb</button> &nbsp;
+            <RouterLink v-if="isLoggedIn" :to="'/climb/update/' + climb._id">Edit Climb</RouterLink>
         </li>
     </ul>
     <hr>
-    
-    <NewClimb :fetchData="fetchData"/>
-</template>
+     <NewClimb v-if="isLoggedIn" :fetchData="fetchData"/>        
+    </template>
