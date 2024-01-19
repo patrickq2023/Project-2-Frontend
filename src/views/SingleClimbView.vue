@@ -30,6 +30,6 @@ onMounted(() => {
     <br>
     <h3 v-if="climb.category"> Category: {{ climb.category }}</h3> 
     <br>
-    <h3 v-if="climb.about"> About:{{ climb.about }}</h3>      
+    <h3 style="max-width: 600px;" v-if="climb.about"> About:{{ climb.about }}</h3>      
 
 </template>

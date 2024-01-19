@@ -38,8 +38,8 @@ onMounted(() => {
 <template>
     <h1>Climb List</h1>
     <ul>
-        <li v-for="climb in climbsBe" :key="climb._id">
-            <RouterLink :to="'/climb/' + climb._id">{{ climb.name }}</RouterLink> &nbsp;
+        <li class="climblist" v-for="climb in climbsBe" :key="climb._id">
+            <RouterLink class="climblist1" :to="'/climb/' + climb._id">{{ climb.name }}</RouterLink> &nbsp;
             <button @click="deleteClimb(climb._id)">Delete Climb</button> &nbsp;
             <RouterLink :to="'/climb/update/' + climb._id">Edit Climb</RouterLink>
         </li>
