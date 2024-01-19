@@ -6,6 +6,7 @@
 <template>
   <main>
     <img src="https://i.imgur.com/WWTiPr5.jpg" alt="montage of pictures of climbs">
+    <br>
     <h1>Classic European Climbs To Conquer</h1>
     <br>
     <h3>Welcome to my app, please select a climb from the list</h3>

@@ -18,12 +18,31 @@ a,
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
-  }
+  }  
+}
+nav {
+  display: flex;
+  width: 600px;
+  align-content: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+h3{
+  font-size: 30px;
+}
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ul {
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
 }
 .wrapper {
   display: flex;
   flex-direction: row;
   font-size: 15px;
+  margin-bottom: 15px;
 }
 .intro {
   max-width: 600px;

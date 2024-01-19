@@ -13,12 +13,12 @@
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-divider-dark-2: rgba(141, 128, 128, 0.48);
 
   --vt-c-text-light-1: var(--vt-c-indigo);
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-dark-2: rgba(245, 244, 244, 0.64);
 }
 
 /* semantic color variables for this project */
@@ -61,7 +61,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: #2c3338;    
+  background: #31363a;    
 /*  this is the place to change bkg col */
   transition:
     color 0.5s,
